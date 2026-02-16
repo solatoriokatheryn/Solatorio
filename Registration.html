@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<style>
+	body {
+    font-family: Arial, sans-serif;
+    background: lightgray;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+
+	.card {
+	    background: white;
+	    width: 350px;
+	    padding: 25px;
+	    border-radius: 15px;
+	    box-shadow: 0 9px 15px rgba(0,0,0,0.9);
+	}
+
+	h3 {
+	    text-align: center;
+	    margin-bottom: 30px;
+	    font-size: 30px;
+	}
+
+	.form-group {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+	label {
+	    font-size: 14px;
+	    font-weight: bold;
+	}
+
+	input[type="text"],
+	input[type="password"] {
+	    width: 100%;
+	    padding: 10px;
+	    margin-top: 6px;
+	    border: 1px solid black;
+	    border-radius: 6px;
+	    font-size: 15px;
+	    box-sizing: border-box;
+	}
+
+	button {
+	    width: 100%;
+	    padding: 12px;
+	    border: none;
+	    background: #0d6efd;
+	    color: white;
+	    border-radius: 6px;
+	    font-size: 16px;
+	    cursor: pointer;
+	    transition: 0.9s ease;
+	}
+
+	button:hover {
+	    background: white;
+	    color: #0d6efd;
+	}
+
+	button:active {
+		background: #0d6efd;
+		color: black;
+	}
+
+	a {
+		text-decoration: none;
+	}
+</style>
+<body>
+    <div class="card">
+        <h3>Registration:</h3>
+
+        <form id="loginForm">
+
+            <div class="form-group">
+                <label> Complete Name:</label>
+                <input type="text" name="username" placeholder="Enter your complete name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="password" name="password" placeholder="Enter your address" required>
+            </div>
+            
+            <div class="form-group">
+                <label> Birthdate:</label>
+                <input type="text" name="username" placeholder="Enter your birthdate" required>
+            </div>
+            
+            <div class="form-group">
+                <label> Username:</label>
+                <input type="text" name="username" placeholder="Enter your username" required>
+            </div>
+            
+            <div class="form-group">
+                <label> Password:</label>
+                <input type="text" name="username" placeholder="Enter your password" required>
+            </div>
+            
+            <div class="form-group">
+                <label> Confirm Password:</label>
+                <input type="text" name="username" placeholder="Enter your confirm password" required>
+            </div>
+            
+            <button type="submit" style="margin-bottom: 10px;">Login</button>
+            <a href="index.html" style="text-decoration: none;">Create an Account</a>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            let username = document.querySelector("input[name='username']").value;
+            let password = document.querySelector("input[name='password']").value;
+
+            alert("Entered Username: " + username + "\nEntered Password: " + password);
+        });
+    </script>
+</body>
+</html>
